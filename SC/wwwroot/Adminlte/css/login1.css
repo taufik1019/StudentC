@@ -1,97 +1,179 @@
-body{
+
+/*css baru*/
+a {
+    text-decoration: none;
+}
+
+    a:hover {
+        text-shadow: 0px 1px 18px #15f4ee;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+body {
+    /*
+       background: -webkit-linear-gradient(bottom, #3498db, #7bdcf7);
+       background-repeat: no-repeat;
+    */
+    background: #2980b9;
+    overflow: hidden;
+}
+
+    body:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background: #3498db;
+        -webkit-transform-origin: 100% 0;
+        -ms-transform-origin: 100% 0;
+        transform-origin: 100% 0;
+        -webkit-transform: skewX(-10deg);
+        -ms-transform: skewX(-10deg);
+        transform: skewX(-10deg);
+        z-index: -1;
+        transform-origin: bottom;
+    }
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
     margin: 0;
     padding: 0;
-    background: url(https://i.ibb.co/VQmtgjh/6845078.png) no-repeat;
-    height: 100vh;
-    font-family: sans-serif;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    overflow: hidden}
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
 
-@media screen and (max-width: 600px)
+::selection {
+    background: rgba(26,188,156,0.3);
+}
 
-{body{
-    background-size: cover; fixed}}
 
-#particles-js{height: 100%}
+.card1 {
+    width: 400px;
+    background-color: transparent;
+    padding: 0;
+    float: left;
+    margin: 10% 0 0 10%;
+}
 
-.loginBox{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 350px;
-    min-height: 200px;
-    background: #000000;
-    border-radius: 10px;
-    padding: 40px;
-    box-sizing: border-box}
+.card2 {
+    width: 400px;
+    background-color: transparent;
+    padding: 0;
+    float: right;
+    margin: 10% auto;
+}
 
-.user{
-    margin: 0 auto;
-    display: block;
-    margin-bottom: 20px}
-    
-h3{
-    margin: 0;
-    padding: 0 0 20px;
-    color: #59238F;
-    text-align: center}
 
-.loginBox input{
+.card-content {
     width: 100%;
-    margin-bottom: 20px}
-    
-.loginBox input[type="email"], 
-.loginBox input[type="password"]{
-    border: none;
-    border-bottom: 2px solid #262626;
-    outline: none;
-    height: 40px;
-    color: #fff;
-    background: transparent;
-    font-size: 16px;
-    padding-left: 20px;
-    box-sizing: border-box}
-    
-.loginBox input[type="email"]:hover, 
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+}
 
-.loginBox input[type="password"]:hover{
-    color: #42F3FA;
-    border: 1px solid #42F3FA;
-    box-shadow: 0 0 5px rgba(0,255,0,.3), 
-    0 0 10px rgba(0,255,0,.2), 
-    0 0 15px rgba(0,255,0,.1), 
-    0 2px 0 black}
-    
-.loginBox input[type="email"]:focus, 
-.loginBox input[type="password"]:focus{border-bottom: 2px solid #42F3FA}
-.inputBox{position: relative}
-.inputBox span{position: absolute;
-top: 10px;color: #262626}
+    .card-content .title {
+        height: 90px;
+        background: -webkit-linear-gradient(right, #1dddf2, #2980b9);
+        border-radius: 5px 5px 0 0;
+        color: #fff;
+        font-size: 30px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.loginBox input[type="submit"]
-{
-    border: none;
-    outline: none;
-    height: 40px;
-    font-size: 16px;
-    background: #59238F;
+    .card-content form {
+        padding: 30px 25px 25px 25px;
+    }
+
+        .card-content form .row {
+            height: 45px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+            .card-content form .row input {
+                height: 100%;
+                width: 100%;
+                outline: none;
+                padding-left: 60px;
+                border-radius: 5px;
+                border: 1px solid lightblue;
+                font-size: 16px;
+                transition: all 0.3s ease;
+            }
+
+form .row input:focus {
+    border-color: #16a085;
+    box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+}
+
+form .row input::placeholder {
+    color: #999;
+}
+
+.card-content form .row i {
+    position: absolute;
+    width: 47px;
+    height: 100%;
     color: #fff;
-    border-radius: 20px;
-    cursor: pointer}
-    
-.loginBox a{
-    color: #262626;
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: none;
+    font-size: 18px;
+    background: -webkit-linear-gradient(right, #1dddf2, #2980b9);
+    border: 1px solid #2980b9;
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-content form .pass {
+    margin: -8px 0 20px 0;
+}
+
+    .card-content form .pass a {
+        color: #2980b9;
+        font-size: 17px;
+        text-decoration: none;
+    }
+
+        .card-content form .pass a:hover {
+            text-decoration: underline;
+        }
+
+.card-content form .button input {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    width: 50%;
+    margin: auto;
+    padding-left: 0px;
+    background: -webkit-linear-gradient(right, #1dddf2, #2980b9);
+    border: 1px solid #2980b9;
+    cursor: pointer;
+}
+
+form .button input:hover {
+    background: #2980b9;
+}
+
+.card-content form .signup-link {
     text-align: center;
-    display: block}
-    
-    a:hover{
-        color: #00ffff}
-        
-    p{
-        color: #0000ff}
+    margin-top: 20px;
+    font-size: 17px;
+}
+
+    .card-content form .signup-link a {
+        color: #2980b9;
+        text-decoration: none;
+    }
+
+form .signup-link a:hover {
+    text-decoration: underline;
+}

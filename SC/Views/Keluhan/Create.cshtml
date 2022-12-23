@@ -1,7 +1,7 @@
 ﻿@model SC.Models.Keluhan
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Create"; Layout = "_LayoutMhs";
 }
 
 <h1>Create</h1>
@@ -27,8 +27,8 @@
                 <input asp-for="UserId" type="hidden" value="@ViewBag.iduser" class="form-control" />
                 <span asp-validation-for="UserId" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+            <div class="form-group text-center">
+                <input type="submit" value="Create" class="btn btn-info" style="width:50%" />
             </div>
         </form>
     </div>

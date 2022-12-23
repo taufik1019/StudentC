@@ -1,8 +1,48 @@
-﻿
+﻿@*
+    <form method="post" asp-action="Register">
+        Name :<input type="text" name="Name" />
+        Email    :<input type="email" name="Email" />
+        Pass     :<input type="password" name="Password" />
+        <button type="submit">Submit</button>
+    </form>
+*@
 
-<form method="post" asp-action="Register">
-    Name :<input type="text" name="Name" />
-    Email    :<input type="email" name="Email" />
-    Pass     :<input type="password" name="Password" />
-    <button type="submit">Submit</button>
-</form>
+
+<head>
+    <link rel="stylesheet" href="~/Adminlte/css/login1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+</head>
+
+<div class="sheet">
+
+    <img width="400px" src="~/Adminlte/images/LogoSC.png" />
+
+    <div class="card2">
+        <div class="card-content">
+            <div class="title"><span>Lakukan Pendaftaran</span></div>
+            <form method="post" asp-action="Register">
+                <div class="row">
+                    <input id="name" type="text" name="name" placeholder="Nama">
+                </div>
+                <div class="row">
+                    <input id="email" type="email" name="Email" placeholder="Email">
+                </div>
+                <div class="row">
+                    <input id="password" type="password" name="Password" placeholder="Password">
+                </div>
+                <div class="row">
+                    <input id="nim" type="text" name="nim" placeholder="NIM">
+                </div>
+                <div class="row">
+                    <input id="prodi" type="text" name="prodi" placeholder="Prodi">
+                </div>
+                <div class="row">
+                    <input id="tgl" type="date" name="tgl" placeholder="Tanggal Lahir">
+                </div>
+                <div class="row button">
+                    <button id="submit-btn" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,7 +1,7 @@
 ﻿@model SC.Models.Keluhan
 
 @{
-    ViewData["Title"] = "Remove";
+    ViewData["Title"] = "Remove"; Layout = "_LayoutMhs";
 }
 
 <h1>Remove</h1>
@@ -44,7 +44,7 @@
     </dl>
     
     <form asp-action="Remove">
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <input type="submit" value="Delete" class="btn btn-danger" style="width:12%"/> |
         <a asp-action="Index">Back to List</a>
     </form>
 </div>
