@@ -5,13 +5,13 @@
     Layout = "_LayoutAdmin";
 }
 
-<h1>Keluhan</h1>
+<h2>Keluhan</h2>
 
 <p>
     @*<a asp-action="Create" class="btn btn-primary">Create</a>*@
 </p>
-<table id="TableKeluhan1">
-    <thead>
+<table class="table table-bordered dataTable table-striped" id="TableKeluhan1">
+    <thead class="table bg-info">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Id)
@@ -28,7 +28,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.KeluhanMhs)
             </th>
-            <th></th>
+            @*<th></th>*@
         </tr>
     </thead>
     <tbody>
@@ -49,11 +49,11 @@
             <td>
                 @Html.DisplayFor(modelItem => item.KeluhanMhs)
             </td>
-            <td>
-                @*@Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "fa fa-edit" }) |
+            @*<td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "fa fa-edit" }) |
 
-            @Html.ActionLink("Remove", "Remove", new { id = item.Id }, new { @class = "fa fa-trush" })*@
-            </td>
+            @Html.ActionLink("Remove", "Remove", new { id = item.Id }, new { @class = "fa fa-trush" })
+            </td>*@
         </tr>
 }
     </tbody>

@@ -11,14 +11,14 @@
     }
 </style>
 
-<h1>Keluhan</h1>
+<h2 class="mb-2">Keluhan</h2>
 
 <p>
-    <a asp-action="Create" class="btn btn-primary">Create</a>
+    <a asp-action="Create" class="btn btn-info" style="height:36px;">Create</a>
     @ViewBag.iduser
 </p>
-<table id="KeluhanTable">
-    <thead>
+<table class="table table-bordered dataTable no-footer table-striped" id="KeluhanTable">
+    <thead class="table bg-info">
         <tr>
             <th>
                 ID
@@ -76,33 +76,31 @@
                 @keluhanmhs ...
             </td>
             <td>
-                @{
-                    var iddetail = item.Id;
-                    var dataname = item.User.Username;
-                    var prodi = item.User.ProfilMahasiswa.Prodi;
-                    var tglkeluhan = item.Tanggal;
-                    var UsrId = item.UserId;
-                    var keluhantext = item.KeluhanMhs;
-                    var jwbnkeluhan = ViewBag.respon.Getrespon(item.Id);
-                    var jbr = "";
-                    if (jwbnkeluhan != null)
-                    {
-                        jbr = jwbnkeluhan.Respon;
-                    }
-                    else
-                    {
-                        jbr = "";
-                    }
-                }
-                <a href="#" data-jwb="@jbr" data-id="@iddetail" data-name="@dataname" data-usrid="@UsrId" data-prodi="@prodi"  data-tglkeluhan="@tglkeluhan" data-keluhantxt="@keluhantext" data-bs-toggle="modal" data-bs-target="#modalDetailkeluhan" class="btn btn-primary detail-btn">detail</a>
+                @{ var iddetail = item.Id;
+                                    var dataname = item.User.Username;
+                                    var prodi = item.User.ProfilMahasiswa.Prodi;
+                                    var tglkeluhan = item.Tanggal;
+                                    var UsrId = item.UserId;
+                                    var keluhantext = item.KeluhanMhs;
+                                    var jwbnkeluhan = ViewBag.respon.Getrespon(item.Id);
+                                    var jbr = "";
+                                    if (jwbnkeluhan != null)
+                                    {
+                                        jbr = jwbnkeluhan.Respon;
+                                    }
+                                    else
+                                    {
+                                        jbr = "";
+                                    } }
+                   
+                <a href="#" data-jwb="@jbr" data-id="@iddetail" data-name="@dataname" data-usrid="@UsrId" data-prodi="@prodi" data-tglkeluhan="@tglkeluhan" data-keluhantxt="@keluhantext" data-bs-toggle="modal" data-bs-target="#modalDetailkeluhan" class="btn btn-info detail-btn">Detail</a>
 
-                @if(jwbnkeluhan == null) { 
+                @if (jwbnkeluhan == null)
+                {
 
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-primary" }) 
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-info" })
 
-                @Html.ActionLink("Remove", "Remove", new { id = item.Id }, new { @class = "btn btn-danger" })
-
-                }
+                    @Html.ActionLink("Remove", "Remove", new { id = item.Id }, new { @class = "btn btn-danger" })                }
             </td>
         </tr>
 
